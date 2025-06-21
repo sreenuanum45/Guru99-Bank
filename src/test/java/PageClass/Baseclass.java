@@ -21,8 +21,11 @@ public class Baseclass {
         sparkReporter.config().setTheme(Theme.STANDARD);
         sparkReporter.config().setDocumentTitle("Automation Report");
         sparkReporter.config().setReportName("Test Execution Report");
+        sparkReporter.config().setEncoding("utf-8");
+        sparkReporter.config().setTimeStampFormat("dd/MM/yyyy HH:mm:ss");
         extent = new ExtentReports();
         extent.attachReporter(sparkReporter);
+
     }
 
     @AfterSuite
